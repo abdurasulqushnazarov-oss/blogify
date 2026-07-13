@@ -33,7 +33,7 @@ function App() {
     },
     {
       path: "/admin",
-      element: <Adminlayout />,
+      element: <AdminLayout />,
       children: [
         {
           index: true,
