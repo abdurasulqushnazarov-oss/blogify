@@ -1,15 +1,20 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Layoutlar
 import AdminLayout from "./layouts/AdminLayout";
 import PublicLayout from "./layouts/PublicLayout";
-import PostsDetail from "./pages/public/PostsDetail";
-import Dashboard from "./pages/admin/Dashboard";
-import Posts from "./pages/public/Posts";
+
+// Sahifalar (Public)
 import Home from "./pages/public/Home";
+import Posts from "./pages/public/Posts";
+import PostsDetail from "./pages/public/PostsDetail";
+import ErrorPage from "./pages/public/ErrorPage";
+
+// Sahifalar (Admin)
+import Dashboard from "./pages/admin/Dashboard";
 import CreatePost from "./pages/admin/CreatePost";
 import UpdatePost from "./pages/admin/UpdatePost";
-import Navbar from "./components/Navbar";
-import ErrorPage from "./pages/public/ErrorPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,15 +24,15 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />,
+          element: <Home />, // Home sahifasi
         },
         {
-          path: "Posts",
-          element: <Posts />,
+          path: "posts", // /posts
+          element: <Posts />, // Posts sahifasi
         },
         {
-          path: "/Posts/:id",
-          element: <PostsDetail />,
+          path: "posts/:id", // /posts/:id
+          element: <PostsDetail />, // PostsDetail sahifasi
         },
       ],
     },
@@ -37,22 +42,21 @@ function App() {
       children: [
         {
           index: true,
-          element: <Dashboard />,
+          element: <Dashboard />, // Dashboard sahifasi
         },
         {
-          path: "CreatePost",
-          element: <CreatePost />,
+          path: "create-post", // /admin/create-post
+          element: <CreatePost />, // CreatePost sahifasi
         },
         {
-          path: "UpdatePost",
-          element: <UpdatePost />,
+          path: "update-post", // /admin/update-post
+          element: <UpdatePost />, // UpdatePost sahifasi
         },
       ],
     },
-
     {
       path: "*",
-      element: <ErrorPage />,
+      element: <ErrorPage />, // ErrorPage sahifasi
     },
   ]);
 
