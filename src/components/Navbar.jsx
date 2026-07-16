@@ -8,7 +8,7 @@ function Navbar() {
         <img src="logo.svg" alt="" className="cursor-pointer" />
         <div className="flex space-x-4 gap-8  items-center justify-center">
           <Link to="/">Home</Link>
-          <Link to="post">Post</Link>
+          <Link to="/posts">Posts</Link>
           <Button variant={"secondary"} text={"login"} />
         </div>
       </div>
