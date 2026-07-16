@@ -7,8 +7,18 @@ function Navbar() {
       <div className="flex items-center justify-between py-4">
         <img src="logo.svg" alt="" className="cursor-pointer" />
         <div className="flex space-x-4 gap-8  items-center justify-center">
-          <Link to="/">Home</Link>
-          <Link to="/posts">Posts</Link>
+          <Link
+            to="/"
+            className="font-medium text-[#1a1a24] hover:text-blue-500"
+          >
+            Home
+          </Link>
+          <Link
+            to="/posts"
+            className="font-medium text-[#1a1a24] hover:text-blue-500"
+          >
+            Posts
+          </Link>
           <Button variant={"secondary"} text={"login"} />
         </div>
       </div>
