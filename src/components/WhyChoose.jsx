@@ -16,21 +16,21 @@ function WhyChoose() {
 
         <div className="max-w-6xl w-full flex flex-wrap justify-center gap-6">
           <ChooseCard
-            iconSrc={"/public/fast.svg"}
+            iconSrc={"/fast.svg"}
             title={"Fast"}
             description={
               "Lightning-fast performance with modernweb technologies for the best readingexperience."
             }
           />
           <ChooseCard
-            iconSrc={"/public/Overlay.svg"}
+            iconSrc={"/Overlay.svg"}
             title={"Secure"}
             description={
               "Your data is protected with industry-standard security practices andencryption."
             }
           />
           <ChooseCard
-            iconSrc={"/public/setting.svg"}
+            iconSrc={"/setting.svg"}
             title={"Easy to Manage"}
             description={
               "Intuitive admin dashboard makes contentmanagement effortless and enjoyable."

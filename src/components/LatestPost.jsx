@@ -20,21 +20,21 @@ function LatestPost() {
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <PostCard
-            image="/public/fon1.svg"
+            image="/fon1.svg"
             category="Technology"
             date="Nov 20, 2025"
             title="The Future of Web Development"
             description="Exploring the latest trends and technologies shaping the future of web development in 2026."
           />
           <PostCard
-            image="/public/fon2.svg"
+            image="/fon2.svg"
             category="Productivity"
             date="Nov 18, 2025"
             title="Mastering Productivity"
             description="Proven strategies and tools to boost your productivity and achieve your goals faster."
           />
           <PostCard
-            image="/public/fon3.svg"
+            image="/fon3.svg"
             category="Design"
             date="Nov 15, 2025"
             title="Design Principles That Matter"
