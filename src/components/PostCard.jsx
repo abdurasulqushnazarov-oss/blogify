@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function PostCard({ article }) {
   let { id, title, content, image, created_at, author, category, updated_at } =
     article;
 
+  let navigate = useNavigate();
+
   return (
-    <div className="group bg-white border border-gray-100 rounded-[24px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+    <div
+      onClick={() => navigate(`/posts/${id}`)}
+      className="group bg-white border border-gray-100 rounded-[24px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+    >
       <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100">
         <img
           src={image}
