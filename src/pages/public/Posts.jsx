@@ -54,11 +54,38 @@ function Posts() {
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <PostCard
           article={{
-            image: "https://images.unsplash.com/...",
+            id: 1,
+            image:
+              "https://tevoj98108.pythonanywhere.com/media/images/bmw_dakFt6r.jpg",
+            category: { name: "Design" },
+            created_at: "2026-07-17T12:39:08.310160+05:00",
+            title: "BMW",
+            content:
+              "BMW M5 CS buBMW M divizioni tarixidagi eng kuchli va eng yengil sedan635 ot kuchiga ega 4,4 litrli ikki turbinali V8 dvigateli bilan jihozlangan u rekord darajadagi 3 soniyada 0 dan 100 km/soatgacha tezlashadi. Uglerod tolasining ko'pligi tufayli Competition versiyasidan 70 kg yengilroq va ishga tushirilgandagi maksimal narxi 142 000 dollardan oshdi.",
+          }}
+        />
+        <PostCard
+          article={{
+            id: 2,
+            image:
+              "https://tevoj98108.pythonanywhere.com/media/images/bugati.jpg",
             category: { name: "Technology" },
-            created_at: "Nov 20, 2025",
-            title: "The Future of Web Development",
-            content: "Exploring the latest trends...",
+            created_at: "2026-07-17T13:29:58.408337+05:00",
+            title: "Buggati",
+            content:
+              "Bugatti (1909–1963)\
+1909-yilda Ettore Bugatti kompaniyaga asos solgan [ 2 ] . U Molsheimdagi tashlandiq bo'yoq zavodidan fabrika sifatida foydalangan . Bugatti Type 13 1910-yilda paydo bo'lgan va Ernest Fridrix boshqargan avtomobil 1911-yilgi Fransiya Gran-prisida kuchliroq mashinalarni ortda qoldirib, ikkinchi o'rinni egallagan [ 3 ] .",
+          }}
+        />
+        <PostCard
+          article={{
+            id: 3,
+            image:
+              "https://tevoj98108.pythonanywhere.com/media/images/1000040744.png",
+            category: { name: "Productivity" },
+            created_at: "2026-07-17T16:12:49.467715+05:00",
+            title: "Vibe Coding",
+            content: "Vibe coding boshqachda",
           }}
         />
       </div>
