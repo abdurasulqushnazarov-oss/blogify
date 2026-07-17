@@ -4,7 +4,7 @@ import Button from "./Button";
 function HeroHome() {
   return (
     <section className="  w-full bg-[#F1F1FE] flex  px-6 py-12 md:py-16">
-      <div className="container">
+      <div className="align-center ">
         <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1a1a24] tracking-tight leading-[1.15] mb-6">

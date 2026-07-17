@@ -2,8 +2,8 @@ import React from "react";
 import ChooseCard from "./ChooseCard";
 function WhyChoose() {
   return (
-    <div>
-      <section className="  py-20 md:py-20 flex flex-col items-center  container">
+    <>
+      <section className="align-center py-20 md:py-20 flex flex-col items-center">
         <div className="text-center max-w-2xl mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1a1a24] mb-4 tracking-tight">
             Why Choose Blogify?
@@ -14,7 +14,7 @@ function WhyChoose() {
           </p>
         </div>
 
-        <div className="max-w-6xl w-full flex flex-wrap justify-center gap-6">
+        <div className="w-full flex flex-wrap justify-center gap-6">
           <ChooseCard
             iconSrc={"/fast.svg"}
             title={"Fast"}
@@ -38,7 +38,7 @@ function WhyChoose() {
           />
         </div>
       </section>
-    </div>
+    </>
   );
 }
 
