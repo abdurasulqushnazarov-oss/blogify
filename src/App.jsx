@@ -19,6 +19,8 @@ import UpdatePost from "./pages/admin/UpdatePost";
 // Login Page
 import LoginPage from "./pages/auth/LoginPage";
 
+import ProtectedRoute from "./components/ProtectedRoute";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -41,18 +43,22 @@ function App() {
     },
     {
       path: "/admin",
-      element: <AdminLayout />,
+      element: (
+        <ProtectedRoute>
+          <AdminLayout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           index: true,
           element: <Dashboard />, // Dashboard sahifasi
         },
         {
-          path: "create-post", // /admin/create-post
+          path: "createpost", // /admin/create-post
           element: <CreatePost />, // CreatePost sahifasi
         },
         {
-          path: "update-post", // /admin/update-post
+          path: "updatepost", // /admin/update-post
           element: <UpdatePost />, // UpdatePost sahifasi
         },
       ],

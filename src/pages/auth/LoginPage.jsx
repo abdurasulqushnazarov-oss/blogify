@@ -2,21 +2,49 @@ import React from "react";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
+import { toast } from "react-toastify";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
   let emailRef = useRef();
   let passwordRef = useRef();
 
-  function handleSubmit(e) {
+  const navigate = useNavigate();
+
+  async function handleSubmit(e) {
     e.preventDefault();
 
     let formData = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
     };
-    console.log(formData);
+
+    try {
+      let res = await fetch(
+        "https://tevoj98108.pythonanywhere.com/auth/login/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        },
+      );
+
+      if (!res.ok) {
+        throw new Error("Yuborishda muammo");
+      }
+
+      let data = await res.json();
+      localStorage.setItem("access", data.data.access);
+      navigate("/admin");
+      console.log(data);
+    } catch (error) {
+      toast.error("loginda muammo");
+    }
   }
 
   return (
