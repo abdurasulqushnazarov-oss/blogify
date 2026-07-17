@@ -19,7 +19,9 @@ function Navbar() {
           >
             Posts
           </Link>
-          <Button variant={"secondary"} text={"login"} />
+          <Link to="/login">
+            <Button variant={"secondary"} text={"login"} />
+          </Link>
         </div>
       </div>
     </nav>

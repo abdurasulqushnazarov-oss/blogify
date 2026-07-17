@@ -16,6 +16,9 @@ import Dashboard from "./pages/admin/Dashboard";
 import CreatePost from "./pages/admin/CreatePost";
 import UpdatePost from "./pages/admin/UpdatePost";
 
+// Login Page
+import LoginPage from "./pages/auth/LoginPage";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -57,6 +60,10 @@ function App() {
     {
       path: "*",
       element: <ErrorPage />, // ErrorPage sahifasi
+    },
+    {
+      path: "/login",
+      element: <LoginPage />, // LoginPage sahifasi
     },
   ]);
 
