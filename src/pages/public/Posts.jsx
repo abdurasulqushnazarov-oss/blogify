@@ -53,51 +53,13 @@ function Posts() {
       </div>
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <PostCard
-          image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60"
-          category="Technology"
-          date="Nov 20, 2025"
-          title="The Future of Web Development"
-          description="Exploring the latest trends and technologies shaping the future of web development in 2026."
-        />
-
-        <PostCard
-          image="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=60"
-          category="Productivity"
-          date="Nov 18, 2025"
-          title="Mastering Productivity"
-          description="Proven strategies and tools to boost your productivity and achieve your goals faster."
-        />
-
-        <PostCard
-          image="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=500&auto=format&fit=crop&q=60"
-          category="Design"
-          date="Nov 15, 2025"
-          title="Design Principles That Matter"
-          description="Essential design principles every creator should know to build stunning user experiences."
-        />
-
-        <PostCard
-          image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60"
-          category="Technology"
-          date="Nov 12, 2025"
-          title="Building Scalable Applications"
-          description="Learn how to architect and build applications that can scale to millions of users."
-        />
-
-        <PostCard
-          image="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=60"
-          category="Productivity"
-          date="Nov 10, 2025"
-          title="The Art of Remote Work"
-          description="Tips and best practices for thriving in a remote work environment."
-        />
-
-        <PostCard
-          image="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=500&auto=format&fit=crop&q=60"
-          category="Design"
-          date="Nov 8, 2025"
-          title="Color Theory in Digital Design"
-          description="Understanding how color affects user perception and behavior in digital products."
+          article={{
+            image: "https://images.unsplash.com/...",
+            category: { name: "Technology" },
+            created_at: "Nov 20, 2025",
+            title: "The Future of Web Development",
+            content: "Exploring the latest trends...",
+          }}
         />
       </div>
     </section>
@@ -105,3 +67,43 @@ function Posts() {
 }
 
 export default Posts;
+
+// <PostCard
+//           image="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=60"
+//           category="Productivity"
+//           date="Nov 18, 2025"
+//           title="Mastering Productivity"
+//           description="Proven strategies and tools to boost your productivity and achieve your goals faster."
+//         />
+
+//         <PostCard
+//           image="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=500&auto=format&fit=crop&q=60"
+//           category="Design"
+//           date="Nov 15, 2025"
+//           title="Design Principles That Matter"
+//           description="Essential design principles every creator should know to build stunning user experiences."
+//         />
+
+//         <PostCard
+//           image="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop&q=60"
+//           category="Technology"
+//           date="Nov 12, 2025"
+//           title="Building Scalable Applications"
+//           description="Learn how to architect and build applications that can scale to millions of users."
+//         />
+
+//         <PostCard
+//           image="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=60"
+//           category="Productivity"
+//           date="Nov 10, 2025"
+//           title="The Art of Remote Work"
+//           description="Tips and best practices for thriving in a remote work environment."
+//         />
+
+//         <PostCard
+//           image="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=500&auto=format&fit=crop&q=60"
+//           category="Design"
+//           date="Nov 8, 2025"
+//           title="Color Theory in Digital Design"
+//           description="Understanding how color affects user perception and behavior in digital products."
+//         />

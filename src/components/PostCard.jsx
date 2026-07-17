@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function PostCard({ image, category, date, title, description }) {
+function PostCard({ article }) {
+  let { id, title, content, image, created_at, author, category, updated_at } =
+    article;
+
   return (
     <div className="group bg-white border border-gray-100 rounded-[24px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
       <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100">
@@ -10,7 +14,7 @@ function PostCard({ image, category, date, title, description }) {
           className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-in-out"
         />
         <span className="absolute top-4 left-4 bg-[#5636f3] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm backdrop-blur-sm bg-opacity-90">
-          {category}
+          {category.name}
         </span>
       </div>
       <div className="p-6 md:p-8 flex flex-col flex-grow gap-3">
@@ -31,16 +35,16 @@ function PostCard({ image, category, date, title, description }) {
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          <span>{date}</span>
+          <span>{created_at}</span>
         </div>
         <h3 className="text-lg md:text-xl font-bold text-[#1a1a24] leading-snug group-hover:text-[#5636f3] transition-colors duration-200">
           {title}
         </h3>
         <p className="text-[14px] text-[#6c7281] leading-relaxed line-clamp-2 flex-grow">
-          {description}
+          {content}
         </p>
         <div className="pt-2 flex items-center gap-1.5 text-sm font-bold text-[#5636f3] cursor-pointer group/link">
-          <span>Read more</span>
+          <Link to={"/posts"}>Read more</Link>
           <svg
             className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform duration-200"
             xmlns="http://www.w3.org/2000/svg"

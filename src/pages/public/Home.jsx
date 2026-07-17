@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     async function getPosts() {
       try {
-        let res = await fetch(BASE_URL + "articles/");
+        let res = await fetch(BASE_URL + "/articles/");
 
         console.log(res);
         if (!res.ok) {
@@ -22,10 +22,9 @@ function Home() {
         }
 
         let data = await res.json();
-        console.log(data);
+        setArticles(data.data.results);
         toast.success("Success");
       } catch (error) {
-        console.log(error);
         toast.error("Articles kelmadi");
       }
     }
@@ -37,7 +36,7 @@ function Home() {
     <>
       <HeroHome />
       <WhyChoose />
-      <LatestPost />
+      <LatestPost articles={articles} />
     </>
   );
 }
