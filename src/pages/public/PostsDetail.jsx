@@ -25,9 +25,7 @@ function PostsDetail() {
     getPost();
   }, []);
 
-  return (
-    
-  );
+  return;
 }
 
 export default PostsDetail;
