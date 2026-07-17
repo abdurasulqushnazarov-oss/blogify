@@ -28,7 +28,7 @@ function LoginPage() {
             src="/logo.svg"
             alt="Blogify Logo"
           />
-          <Link to="/" className="font-medium text-black">
+          <Link to="/" className="font-medium text-black mb-8 inline-block">
             ← Back to Home
           </Link>
         </div>
