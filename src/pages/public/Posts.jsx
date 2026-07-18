@@ -14,7 +14,7 @@ function Posts() {
   useEffect(() => {
     async function getPosts() {
       try {
-        let res = await fetch(BASE_URL + "//articles/");
+        let res = await fetch(BASE_URL + "articles/");
 
         console.log(res);
         if (!res.ok) {
