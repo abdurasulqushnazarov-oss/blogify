@@ -50,13 +50,13 @@ function LoginPage() {
   return (
     <div className="w-full min-h-screen flex flex-col lg:flex-row">
       <div className="w-full lg:w-1/2 flex flex-col px-6 md:px-20 py-10">
-        <div className="mb-auto">
+        <div>
           <img
             className="max-w-[100px] mb-8"
             src="/logo.svg"
             alt="Blogify Logo"
           />
-          <Link to="/" className="font-medium text-black mb-8 inline-block">
+          <Link to="/" className="font-medium text-black ">
             ← Back to Home
           </Link>
         </div>
